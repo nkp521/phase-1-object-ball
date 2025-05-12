@@ -120,7 +120,7 @@ const numPointsScored = (playerName) => {
       return team.players[playerName].points;
     }
   }
-  return "Please contact Stove McKeon for no playing time";
+  return "Please contact Stove McKeon for lack of playing time";
 };
 
 const shoeSize = (playerName) => {
@@ -130,7 +130,7 @@ const shoeSize = (playerName) => {
         return team.players[playerName].points;
       }
     }
-    return "Please contact Stove McKeon for custom Big Foot Shoe Fittings"
+    return "Please contact Stove McKeon for custom Shoe Fittings"
 }
 
 // const teamColors = teamName => {
@@ -161,7 +161,7 @@ const playerNumbers = teamName => {
   const teams = [gameObject.home, gameObject.away];
   for (const team of teams) {
     if (team.teamName === teamName) {
-      return [team.players.map(player => player.number)];
+      return [Object.keys(team.players).map(playerName => team.players[playerName].number)];
     }
   }
   return "Please contact Stove McKeon for building your new imaginary expansion team"
@@ -176,3 +176,12 @@ const playerNumbers = teamName => {
 //   }
 //   return "Please contact Stove McKeon for building your new imaginary expansion team"
 // };
+const playerStats = playerName => {
+  const teams = [gameObject.home, gameObject.away];
+  for (const team of teams) {
+    if (playerName in team.players) {
+      return team.players[playerName];
+    }
+  }
+  return "Please contact Stove McKeon to give your imaginary player a contract";
+};
