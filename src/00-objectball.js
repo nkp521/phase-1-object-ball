@@ -185,3 +185,21 @@ const playerStats = playerName => {
   }
   return "Please contact Stove McKeon to give your imaginary player a contract";
 };
+
+const bigShoeRebounds = () => {
+  const teams = [gameObject.home, gameObject.away];
+  let biggestShoeSize = 0;
+  let rebounds = 0;
+
+  for (const team of teams) {
+    for (const player in team.players) {
+      const shoeSize = team.players[player].shoe;
+      if (shoeSize > biggestShoeSize) {
+        biggestShoeSize = shoeSize;
+        rebounds = team.players[player].rebounds;
+      }
+    }
+  }
+
+  return rebounds != null ? rebounds : "Please contact Stove McKeon to see if your shoe size exists";
+};
