@@ -1,4 +1,5 @@
-const gameObject = {
+const gameObject = () => {
+  return{
   home: {
     teamName: "Brooklyn Nets",
     colors: ["Black", "White"],
@@ -111,8 +112,10 @@ const gameObject = {
       },
     },
   },
-};
+}
+}
 
+const game = gameObject
 const numPointsScored = (playerName) => {
   const teams = [gameObject.home, gameObject.away];
   for (const team of teams) {
@@ -127,7 +130,7 @@ const shoeSize = (playerName) => {
   const teams = [gameObject.home, gameObject.away];
     for (const team of teams) {
       if (playerName in team.players){
-        return team.players[playerName].points;
+        return team.players[playerName].shoe;
       }
     }
     return "Please contact Stove McKeon for custom Shoe Fittings"
