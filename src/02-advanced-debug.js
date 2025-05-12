@@ -1,4 +1,4 @@
-console.log('Advanced debugging example running.')
+console.log(gameObject());
 debugger
 
 // first, define the function.
