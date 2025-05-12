@@ -120,5 +120,38 @@ const numPointsScored = (playerName) => {
       return team.players[playerName].points;
     }
   }
-  return "Please contact Stove McKeon for futher assistance";
+  return "Please contact Stove McKeon for no playing time";
 };
+
+const shoeSize = (playerName) => {
+  const teams = [gameObject.home, gameObject.away];
+    for (const team of teams) {
+      if (playerName in team.players){
+        return team.players[playerName].points;
+      }
+    }
+    return "Please contact Stove McKeon for custom Big Foot Shoe Fittings"
+}
+
+// const teamColors = teamName => {
+//   const teams = [gameObject.home, gameObject.away];
+//     for (const team of teams) {
+//       if (teamName === teams.teamName){
+//         return teams.colors
+//       }
+//     }
+//     return "Please contact Stove McKeon for a Color Blindness exam"
+//}
+const teamColors = teamName => {
+  const teams = [gameObject.home, gameObject.away];
+  for (const team of teams) {
+    if (team.teamName === teamName) {
+      return team.colors;
+    }
+  }
+  return "Please contact Stove McKeon for a Color Blindness exam"
+};
+
+const teamNames = team =>{
+  return [gameObject.home.teamName, gameObject.away.teamName];
+} 
