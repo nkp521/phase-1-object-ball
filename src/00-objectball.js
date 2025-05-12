@@ -112,3 +112,13 @@ const gameObject = {
     },
   },
 };
+
+const numPointsScored = (playerName) => {
+  const teams = [gameObject.home, gameObject.away];
+  for (const team of teams) {
+    if (playerName in team.players) {
+      return team.players[playerName].points;
+    }
+  }
+  return "Please contact Stove McKeon for futher assistance";
+};
