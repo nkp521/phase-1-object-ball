@@ -152,6 +152,27 @@ const teamColors = teamName => {
   return "Please contact Stove McKeon for a Color Blindness exam"
 };
 
-const teamNames = team =>{
+const teamNames = teamName => {
   return [gameObject.home.teamName, gameObject.away.teamName];
 } 
+
+// Need to go through the player list and return array
+const playerNumbers = teamName => {
+  const teams = [gameObject.home, gameObject.away];
+  for (const team of teams) {
+    if (team.teamName === teamName) {
+      return [team.players.map(player => player.number)];
+    }
+  }
+  return "Please contact Stove McKeon for building your new imaginary expansion team"
+};
+
+// const playerNumbers = teamName => {
+//   const teams = [gameObject.home, gameObject.away];
+//   for (const team of teams) {
+//     if (team.teamName === teamName) {
+//       return [teams.players.number]
+//     }
+//   }
+//   return "Please contact Stove McKeon for building your new imaginary expansion team"
+// };
