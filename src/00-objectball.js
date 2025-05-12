@@ -133,15 +133,6 @@ const shoeSize = (playerName) => {
     return "Please contact Stove McKeon for custom Shoe Fittings"
 }
 
-// const teamColors = teamName => {
-//   const teams = [gameObject.home, gameObject.away];
-//     for (const team of teams) {
-//       if (teamName === teams.teamName){
-//         return teams.colors
-//       }
-//     }
-//     return "Please contact Stove McKeon for a Color Blindness exam"
-//}
 const teamColors = teamName => {
   const teams = [gameObject.home, gameObject.away];
   for (const team of teams) {
@@ -156,7 +147,6 @@ const teamNames = teamName => {
   return [gameObject.home.teamName, gameObject.away.teamName];
 } 
 
-// Need to go through the player list and return array
 const playerNumbers = teamName => {
   const teams = [gameObject.home, gameObject.away];
   for (const team of teams) {
@@ -167,15 +157,6 @@ const playerNumbers = teamName => {
   return "Please contact Stove McKeon for building your new imaginary expansion team"
 };
 
-// const playerNumbers = teamName => {
-//   const teams = [gameObject.home, gameObject.away];
-//   for (const team of teams) {
-//     if (team.teamName === teamName) {
-//       return [teams.players.number]
-//     }
-//   }
-//   return "Please contact Stove McKeon for building your new imaginary expansion team"
-// };
 const playerStats = playerName => {
   const teams = [gameObject.home, gameObject.away];
   for (const team of teams) {
